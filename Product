@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class Product {
+    private final String nameproduct;
+    private final long kalories;
+
+    public Product(String nameproduct, long kalories) {
+        this.nameproduct = nameproduct;
+        this.kalories = kalories;
+    }
+
+    public String getNameproduct() {
+        return nameproduct;
+    }
+
+    public long getKalories() {
+        return kalories;
+    }
+    /*private  final ArrayList<Product> productList = new ArrayList();
+
+    public void addProduct(Product product){
+       productList.add(product);
+    }
+    public long Sumproduct(){
+        long sum = 0;
+        for (Product product: productList) sum = sum + kalories;
+        return sum;
+    }*/
+
+    @Override
+    public String toString() {
+        return "Product{"+
+                "nameproduct=" + nameproduct +
+                "kalories=" + kalories +
+                "}";
+    }
+
+}
