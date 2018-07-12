@@ -1,0 +1,96 @@
+import java.util.ArrayList;
+
+public class User {
+    private final String name;
+    private final long weight;
+    private final long growth;
+    private final long breakfast;
+    private final long dinner;
+    private final long supper;
+    private final long snack;
+    private final People people;
+
+    public User(String name, long weight, long growth, long breakfast, long dinner, long supper, long snack,People people ) {
+        if (breakfast < 0) {
+            throw new IllegalArgumentException("Negative Breakfast: " + breakfast);
+        }
+        if (dinner < 0) {
+
+            throw new IllegalArgumentException("Negative Dinner: " + dinner);
+        }
+        if (supper < 0) {
+            throw new IllegalArgumentException("Negative Supper: " + supper);
+        }
+        if (Sum() >= 10000) {
+            throw new IllegalArgumentException("Sorry but it has a lot of calories: " + Sum());
+        }
+        this.name = name;
+        this.weight = weight;
+        this.growth = growth;
+        this.breakfast = breakfast;
+        this.dinner = dinner;
+        this.supper = supper;
+        this.snack = snack;
+        this.people = people;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public long getWeight() {
+        return weight;
+    }
+
+    public long getGrowth() {
+        return growth;
+    }
+
+    public long getBreakfast() {
+        return breakfast;
+    }
+
+    public long getDinner() {
+        return dinner;
+    }
+
+    public long getSupper() {
+        return supper;
+    }
+
+    public long getSnack() {
+        return snack;
+    }
+
+    public People getPeople() {
+        return people;
+    }
+
+    private  final ArrayList<User> userList = new ArrayList();
+
+    public void addUser(User user){
+        userList.add(user);
+    }
+
+    public long Sum(){
+        long sum = 0;
+        for (User user: userList) sum = sum + breakfast + dinner + supper;
+        return sum;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name=" + name +
+                ", weigth=" + weight +
+                ", growth="+ growth +
+                ", breakfast="+ breakfast +
+                ", dinner="+ dinner +
+                ", supper="+ supper +
+                ", snack="+ snack +
+                ", people="+ people +
+                '}';
+    }
+}
