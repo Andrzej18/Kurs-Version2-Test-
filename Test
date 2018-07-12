@@ -1,0 +1,43 @@
+public class Test {
+    public static void main(String[] args) {
+       User User1 = new User("Andriy",178,58,435,400,550,300,People.Children);
+
+      User User2 = new User("Oleg",190,97,556,444,678,502, People.Man);
+
+      User User3 = new User("Masha",168,54,430,480,523,678,People.Women);
+
+       User1.addUser(User1);
+       User2.addUser(User2);
+       User3.addUser(User3);
+
+       System.out.println(User1);
+       System.out.println("SumChildren "+ User1.Sum());
+
+        System.out.println(User2);
+        System.out.println("SumMan "+ User2.Sum());
+
+        System.out.println(User3);
+        System.out.println("SumWomen "+ User3.Sum());
+
+        Product product1 = new Product("Soup",128);
+        Product product2 = new Product("Burger",450);
+        Product product3 = new Product("Coca oola",45);
+
+        ProductsHistory productHistory = new ProductsHistory();
+
+        productHistory.addProduct(product1);
+        productHistory.addProduct(product2);
+        productHistory.addProduct(product3);
+
+       // product1.addProduct(product1);
+       // product2.addProduct(product2);
+       // product2.addProduct(product3);
+
+        System.out.println(productHistory);
+
+        /*System.out.println(product1.Sumproduct());
+        System.out.println(product2.Sumproduct());
+        System.out.println(product3.Sumproduct());*/
+
+    }
+}
