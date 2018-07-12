@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductsHistory {
+    private final List<Product> products = new ArrayList<>();
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+    public long getTotalPrice() {
+        long total = 0;
+        for (Product ride : products) {
+            total+=ride.getKalories();
+        }
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductsHistory{" +
+                "products="+ products+
+                '}';
+    }
+}
