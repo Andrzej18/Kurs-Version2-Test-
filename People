@@ -1,0 +1,32 @@
+public enum People {
+    Women("Daily calorie intake for Women ",2079, " calories"),
+    Children("Daily calorie intake for Children ",1700, " calories"),
+    Man( "Daily calorie intake for Man ",2605 , " calories");
+
+    private final String description;
+    private final long number;
+    private final String add;
+
+    People(String description, long number, String add) {
+        this.description = description;
+        this.number = number;
+        this.add = add;
+    }
+
+
+    public long getNumber() {
+        return number;
+    }
+    public String getDescription() {
+        return description;
+    }
+
+    public String getAdd() {
+        return add;
+    }
+
+    @Override
+    public String toString() {
+        return "People{" + description +number + add + '}';
+    }
+}
